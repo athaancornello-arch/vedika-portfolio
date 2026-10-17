@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vedika Phadtare</title>
+<meta name="description" content="Vedika Suresh Phadtare: creative content creator, visual storyteller and digital creative.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300..600;1,9..40,300..500&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 0C12.8 7.2 16.8 11.2 24 12 16.8 12.8 12.8 16.8 12 24 11.2 16.8 7.2 12.8 0 12 7.2 11.2 11.2 7.2 12 0Z"/></symbol>
+  <symbol id="i-bow" viewBox="0 0 120 70"><path d="M60 35C42 8 8 4 6 24 4 44 38 46 60 35Z"/><path d="M60 35C78 8 112 4 114 24 116 44 82 46 60 35Z"/><path d="M56 42C50 54 44 62 36 68L46 66 52 64C56 58 58 52 60 44Z"/><path d="M64 42C70 54 76 62 84 68L74 66 68 64C64 58 62 52 60 44Z"/><ellipse cx="60" cy="35" rx="8" ry="9"/></symbol>
+</svg>
+
+<div id="ambient" aria-hidden="true">
+  <div class="amb-sun"></div>
+  <div class="amb-pink">
+    <svg style="left:6%;top:12%;width:18px;--t:4s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="left:24%;top:70%;width:12px;--t:5s;--dl:.8s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="left:46%;top:6%;width:10px;--t:3.6s;--dl:1.4s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="right:9%;top:22%;width:20px;--t:4.4s;--dl:.3s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="right:30%;top:82%;width:14px;--t:5.2s;--dl:1s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="right:4%;top:58%;width:11px;--t:3.8s;--dl:2s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+    <svg style="left:3%;top:48%;width:13px;--t:4.8s;--dl:1.7s" viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+  </div>
+  <div class="amb-night" id="stars"></div>
+  <div class="amb-play">
+    <span class="s1" style="--t:10s"></span>
+    <span class="s2" style="--t:8s"></span>
+    <span class="s3" style="--t:11s"></span>
+    <svg class="s4" style="--t:9s" viewBox="0 0 120 30"><path d="M2 15Q17 0 32 15T62 15T92 15T118 15" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+    <svg class="s5" style="--t:7s" viewBox="0 0 24 24"><use href="#i-spark" fill="currentColor"/></svg>
+    <svg class="s6" style="--t:6s" viewBox="0 0 24 24"><use href="#i-spark" fill="currentColor"/></svg>
+  </div>
+</div>
+<div class="grain" id="grain" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="orb" aria-hidden="true"><span class="core"></span><span id="orbTag"></span></div>
+
+<div id="site">
+<header class="site-head" id="top">
+  <div class="bar">
+    <div class="mono-wrap">
+      <button class="mono" id="mono" type="button" aria-describedby="monoTip" aria-expanded="false" aria-label="Vedika monogram">V</button>
+      <span class="tip" id="monoTip" role="tooltip">A little world of my own. &#9825;</span>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#universe">Universe</a><a href="#work">Work</a><a href="#reels">Reels</a><a href="#gallery">Gallery</a><a href="#process">Process</a><a href="#collab">Collaborate</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+  <nav class="menu" id="menu" aria-label="Sections" hidden>
+    <a href="#about">About</a><a href="#universe">My Creative Universe</a><a href="#work">Featured Work</a><a href="#reels">Reels &amp; Visual Stories</a><a href="#gallery">Photography &amp; Gallery</a><a href="#process">Creative Process</a><a href="#collab">Collaborations</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- HOME -->
+<section id="home" class="page hero" data-mood="0" data-mix="1" aria-label="Home">
+  <div class="inner hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rv">Portfolio &middot; Issue 01</p>
+      <h1 class="masthead rv" style="--rd:.08s" aria-label="Vedika">Vedi<em>ka</em></h1>
+      <p class="role rv" style="--rd:.16s">Creative content creator, visual storyteller and digital creative.</p>
+      <p class="tagline hand rv" style="--rd:.24s">Creating little moments that feel like magic.</p>
+      <div class="cta-row rv" style="--rd:.32s">
+        <a class="btn btn-solid magnetic" href="#universe" data-cursor="Enter">Explore My World</a>
+        <a class="btn btn-ghost magnetic" href="#work" data-cursor="Enter">View My Work</a>
+      </div>
+      <p class="inside rv" style="--rd:.4s"><span>Inside this issue</span><a href="#reels">Reels</a><a href="#gallery">Photography</a><a href="#work">Fashion &amp; style</a><a href="#work">Festival stories</a></p>
+    </div>
+    <figure class="cover rv" style="--rd:.2s">
+      <div class="arch px" data-speed=".05"><div class="px-in"><span class="ph ph-1" data-slot="hero" data-alt="Portrait of Vedika"><span class="ph-mark">V</span><span class="ph-note">your photo here</span></span></div></div>
+      <svg class="bow spark" data-burst="heart" viewBox="0 0 120 70" role="img" aria-label="Ribbon bow"><use href="#i-bow"/></svg>
+      <p class="note hand" aria-hidden="true">my world, through my own lens</p>
+      <button class="spark" data-burst="star" style="left:-9%;top:16%;width:28px;--t:5s" type="button" aria-label="Sprinkle sparkles"><svg class="ic" viewBox="0 0 24 24"><use href="#i-spark"/></svg></button>
+      <button class="spark" data-burst="star" style="right:-5%;bottom:22%;width:20px;--t:6.5s" type="button" aria-label="Sprinkle sparkles"><svg class="ic" viewBox="0 0 24 24"><use href="#i-spark"/></svg></button>
+    </figure>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page" data-mood="0" data-mix="1">
+  <div class="inner about-grid">
+    <div class="polas" aria-hidden="true">
+      <figure class="pola a spark" data-burst="heart"><div class="px" data-speed=".04"><div class="px-in"><span class="ph ph-2" data-slot="about1" data-alt=""><span class="ph-mark">V</span></span></div></div><figcaption>behind the frames</figcaption></figure>
+      <figure class="pola b spark" data-burst="heart"><div class="px" data-speed=".07"><div class="px-in"><span class="ph ph-6" data-slot="about2" data-alt=""><span class="ph-mark">&#10022;</span></span></div></div><figcaption>little details</figcaption></figure>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow rv">About me</p>
+      <h2 data-split>Hi, I'm Vedika, a creative soul who turns ordinary moments into something <em>beautiful.</em></h2>
+      <p class="rv">I'm drawn to aesthetics, photography, fashion, lifestyle, and the little details that make a story unforgettable. Whether it's creating a reel, capturing a moment, or experimenting with new visual ideas, I love expressing myself through creativity.</p>
+      <p class="rv">I believe every frame has a feeling, every color tells a story, and every creative idea deserves its own space to shine.</p>
+      <p class="rv">This little corner of the internet is where my ideas, inspirations, and creative world come together. Take a look around, explore my work, and get to know the girl behind the frames. &#9825;</p>
+      <p class="hand rv">A little bit of creativity, a little bit of chaos, and a whole lot of me.</p>
+      <ul class="chips rv" aria-label="What I make">
+        <li>Content creation</li><li>Visual storytelling</li><li>Photography</li><li>Short-form video</li><li>Instagram Reels</li><li>Creative direction</li><li>Aesthetic composition</li><li>Social media planning</li><li>Visual editing</li><li>Fashion &amp; lifestyle content</li>
+      </ul>
+      <p class="sig hand rv">Vedika Suresh Phadtare</p>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERSE -->
+<section id="universe" class="page" data-mood="0" data-mix="1">
+  <div class="inner">
+    <div class="sec-head">
+      <p class="eyebrow rv">My creative universe</p>
+      <h2 data-split>Four moods, one girl. Move around and the <em>light changes.</em></h2>
+      <p class="lede rv">Drift your cursor left or right, hover a world, or tap one on your phone. The whole page takes on its colors, its light and its little details.</p>
+    </div>
+    <div class="worlds">
+      <article class="world rv" data-world="0" style="--a:#FFF8F0;--b:#F8DDE5" data-cursor="Feel it">
+        <div class="swatches" aria-hidden="true"><i style="background:#F4C2C2"></i><i style="background:#F8DDE5"></i><i style="background:#FFF8F0"></i><i style="background:#E0B3A4"></i></div>
+        <h3>The Pink <em>Dream</em></h3>
+        <p class="feel">Feminine, dreamy, romantic and playful.</p>
+        <ul><li>Soft pink gradients</li><li>Floating sparkles</li><li>Ribbon-inspired details</li><li>Blurred pink light</li></ul>
+        <button class="world-btn" type="button" aria-pressed="false">Try this mood</button>
+      </article>
+      <article class="world rv" data-world="1" style="--a:#FBF1E3;--b:#E8D5C4;--rd:.08s" data-cursor="Feel it">
+        <div class="swatches" aria-hidden="true"><i style="background:#E8D5C4"></i><i style="background:#FBF1E3"></i><i style="background:#B98A5E"></i><i style="background:#F3C99A"></i></div>
+        <h3>Golden <em>Hour</em></h3>
+        <p class="feel">Warm, peaceful, nostalgic and cinematic.</p>
+        <ul><li>Warm sunlight</li><li>Golden gradients</li><li>Subtle film grain</li><li>Slow, smooth transitions</li></ul>
+        <button class="world-btn" type="button" aria-pressed="false">Try this mood</button>
+      </article>
+      <article class="world dark rv" data-world="2" style="--a:#382A2A;--b:#5A3F52;--rd:.16s" data-cursor="Feel it">
+        <div class="swatches" aria-hidden="true"><i style="background:#382A2A"></i><i style="background:#B78491"></i><i style="background:#7A4E66"></i><i style="background:#F6ECE6"></i></div>
+        <h3>Midnight <em style="color:#F4C2C2">Muse</em></h3>
+        <p class="feel">Elegant, mysterious, artistic and sophisticated.</p>
+        <ul><li>Deep warm gradients</li><li>Glowing highlights</li><li>Minimal star details</li><li>Cinematic transitions</li></ul>
+        <button class="world-btn" type="button" aria-pressed="false">Try this mood</button>
+      </article>
+      <article class="world rv" data-world="3" style="--a:#FBF8FD;--b:#E7DDF5;--rd:.24s" data-cursor="Feel it">
+        <div class="swatches" aria-hidden="true"><i style="background:#E7DDF5"></i><i style="background:#F6C9DD"></i><i style="background:#FBEBA8"></i><i style="background:#FBF8FD"></i></div>
+        <h3>Creative <em>Playground</em></h3>
+        <p class="feel">Playful, imaginative, spontaneous and expressive.</p>
+        <ul><li>Floating abstract shapes</li><li>Tiny doodles</li><li>Playful arrangements</li><li>Unexpected, tasteful motion</li></ul>
+        <button class="world-btn" type="button" aria-pressed="false">Try this mood</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="work" class="page" data-mood="2">
+  <div class="inner">
+    <div class="stage">
+      <div class="sec-head">
+        <p class="eyebrow rv">Featured work</p>
+        <h2 data-split>Five little worlds, <em>after dark.</em></h2>
+        <p class="lede rv">The categories I create in. Each card will link to the real work on Instagram.</p>
+      </div>
+      <div class="proj-grid">
+        <article class="proj tilt rv" data-cursor="Explore">
+          <div class="proj-media px spot" data-speed=".05"><div class="px-in"><span class="ph ph-1" data-slot="p1" data-alt="Visual Storytelling"><span class="ph-mark">V</span></span></div></div>
+          <div class="proj-body">
+            <span class="proj-tag">Reels &middot; Short-form</span>
+            <h3>Visual Storytelling</h3>
+            <p>A collection of my favorite reels and short-form videos that showcase my creativity, editing style, and ability to capture emotions through visuals.</p>
+            <ul class="chips"><li>Reel covers</li><li>Video previews</li><li>Short descriptions</li><li>Instagram links</li></ul>
+            <a class="more" data-link="instagram"><span class="live">View the work &#8599;</span><span class="soon">Link coming soon</span></a>
+          </div>
+        </article>
+        <article class="proj tilt rv" style="--rd:.08s" data-cursor="Explore">
+          <div class="proj-media px spot" data-speed=".05"><div class="px-in"><span class="ph ph-2" data-slot="p2" data-alt="Aesthetic Photography"><span class="ph-mark">V</span></span></div></div>
+          <div class="proj-body">
+            <span class="proj-tag">Photography</span>
+            <h3>Aesthetic Photography</h3>
+            <p>A curated gallery of photographs featuring fashion, lifestyle, celebrations, and everyday moments captured through my perspective.</p>
+            <ul class="chips"><li>Pinterest-style grid</li><li>Full-screen previews</li><li>Mood captions</li></ul>
+            <a class="more" href="#gallery"><span class="live">See the gallery &#8595;</span></a>
+          </div>
+        </article>
+        <article class="proj tilt rv" data-cursor="Explore">
+          <div class="proj-media px spot" data-speed=".05"><div class="px-in"><span class="ph ph-3" data-slot="p3" data-alt="Fashion and Personal Style"><span class="ph-mark">V</span></span></div></div>
+          <div class="proj-body">
+            <span class="proj-tag">Fashion &middot; Style</span>
+            <h3>Fashion &amp; Personal Style</h3>
+            <p>Outfit inspiration, styling experiments, fashion transitions, and personal-style content.</p>
+            <ul class="chips"><li>Outfit photographs</li><li>Before and after</li><li>Fashion reels</li></ul>
+            <a class="more" data-link="instagram"><span class="live">View the work &#8599;</span><span class="soon">Link coming soon</span></a>
+          </div>
+        </article>
+        <article class="proj tilt rv" style="--rd:.08s" data-cursor="Explore">
+          <div class="proj-media px spot" data-speed=".05"><div class="px-in"><span class="ph ph-6" data-slot="p4" data-alt="Festival and Cultural Stories"><span class="ph-mark">V</span></span></div></div>
+          <div class="proj-body">
+            <span class="proj-tag">Festivals &middot; Culture</span>
+            <h3>Festival &amp; Cultural Stories</h3>
+            <p>Meaningful visual stories inspired by festivals, traditions, celebrations, and memorable moments.</p>
+            <ul class="chips"><li>Festival photography</li><li>Short-form videos</li><li>Cinematic transitions</li></ul>
+            <a class="more" data-link="instagram"><span class="live">View the work &#8599;</span><span class="soon">Link coming soon</span></a>
+          </div>
+        </article>
+        <article class="proj tilt rv" style="--rd:.16s" data-cursor="Explore">
+          <div class="proj-media px spot" data-speed=".05"><div class="px-in"><span class="ph ph-4" data-slot="p5" data-alt="Creative Experiments"><span class="ph-mark">V</span></span></div></div>
+          <div class="proj-body">
+            <span class="proj-tag">Experiments</span>
+            <h3>Creative Experiments</h3>
+            <p>A space for exploring new editing techniques, visual effects, creative concepts, and experimental content formats.</p>
+            <ul class="chips"><li>Before and after edits</li><li>Mood boards</li><li>Behind the scenes</li></ul>
+            <a class="more" data-link="instagram"><span class="live">View the work &#8599;</span><span class="soon">Link coming soon</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section id="reels" class="page" data-mood="1">
+  <div class="inner">
+    <div class="sec-head">
+      <p class="eyebrow rv">Reels &amp; visual stories</p>
+      <h2 data-split>Short stories, <em>told in motion.</em></h2>
+      <p class="lede rv">My favorite short-form videos. Each cover will open the original on Instagram.</p>
+    </div>
+    <div class="reel-row">
+      <a class="reel rv" data-link="instagram" data-cursor="Watch" aria-label="Reel 1"><span class="px" style="position:absolute;inset:0"><span class="px-in"><span class="ph ph-2" data-slot="r1" data-alt="Reel cover 1"></span></span></span><span class="play"></span><span class="lab">Reel one</span><span class="ov"><span class="live">Watch on Instagram &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <a class="reel rv" style="--rd:.08s" data-link="instagram" data-cursor="Watch" aria-label="Reel 2"><span class="px" style="position:absolute;inset:0"><span class="px-in"><span class="ph ph-1" data-slot="r2" data-alt="Reel cover 2"></span></span></span><span class="play"></span><span class="lab">Reel two</span><span class="ov"><span class="live">Watch on Instagram &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <a class="reel rv" style="--rd:.16s" data-link="instagram" data-cursor="Watch" aria-label="Reel 3"><span class="px" style="position:absolute;inset:0"><span class="px-in"><span class="ph ph-5" data-slot="r3" data-alt="Reel cover 3"></span></span></span><span class="play"></span><span class="lab">Reel three</span><span class="ov"><span class="live">Watch on Instagram &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <a class="reel rv" style="--rd:.24s" data-link="instagram" data-cursor="Watch" aria-label="Reel 4"><span class="px" style="position:absolute;inset:0"><span class="px-in"><span class="ph ph-4" data-slot="r4" data-alt="Reel cover 4"></span></span></span><span class="play"></span><span class="lab">Reel four</span><span class="ov"><span class="live">Watch on Instagram &#8599;</span><span class="soon">Link coming soon</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="page" data-mood="3">
+  <div class="inner">
+    <div class="sec-head">
+      <p class="eyebrow rv">Photography &amp; gallery</p>
+      <h2 data-split>A scrapbook of <em>small frames.</em></h2>
+      <p class="lede rv">Part Pinterest board, part camera roll. Tap any frame to open it full screen.</p>
+    </div>
+    <div class="filters rv" role="group" aria-label="Filter the gallery">
+      <button class="fbtn" type="button" data-f="All" aria-pressed="true">All</button>
+      <button class="fbtn" type="button" data-f="Fashion" aria-pressed="false">Fashion</button>
+      <button class="fbtn" type="button" data-f="Lifestyle" aria-pressed="false">Lifestyle</button>
+      <button class="fbtn" type="button" data-f="Festival" aria-pressed="false">Festival</button>
+      <button class="fbtn" type="button" data-f="Everyday" aria-pressed="false">Everyday</button>
+    </div>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="page" data-mood="0" data-mix="1">
+  <div class="inner split">
+    <div class="sec-head">
+      <p class="eyebrow rv">My creative process</p>
+      <h2 data-split>From a feeling to a <em>finished frame.</em></h2>
+      <p class="lede rv">Every piece starts the same way, with something small worth keeping.</p>
+    </div>
+    <ol class="timeline" id="timeline" style="list-style:none;margin:0">
+      <li class="step rv"><span class="dot">1</span><h3>Notice</h3><p>I start with the small things: a patch of light, a color pairing, a feeling worth keeping.</p></li>
+      <li class="step rv"><span class="dot">2</span><h3>Collect</h3><p>References go onto a mood board: palettes, poses, textures and songs that belong to the story.</p></li>
+      <li class="step rv"><span class="dot">3</span><h3>Frame</h3><p>I choose the light, the angle and the outfit, and decide what the frame should feel like.</p></li>
+      <li class="step rv"><span class="dot">4</span><h3>Edit</h3><p>Color, rhythm and cuts. Reels get timed to the music, photos stay warm, soft and true to the moment.</p></li>
+      <li class="step rv"><span class="dot">5</span><h3>Share</h3><p>I post it, listen to what people feel, and keep making the ones that make them stay.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- COLLAB -->
+<section id="collab" class="page" data-mood="1" data-mix="1">
+  <div class="inner collab-grid">
+    <div class="collab-copy">
+      <p class="eyebrow rv">Collaborations</p>
+      <h2 data-split>Let's make something <em>worth keeping.</em></h2>
+      <p class="lede rv">I'm open to working with fashion, beauty and lifestyle brands, and with anyone who wants a story told through soft, honest visuals.</p>
+      <a class="btn btn-solid magnetic rv" href="#contact" data-cursor="Say hi">Let's Collaborate</a>
+    </div>
+    <ul class="collab-list rv" aria-label="What we could make together">
+      <li>Reels <small>Short-form video with a point of view</small></li>
+      <li>Photo stories <small>Lifestyle and everyday moments</small></li>
+      <li>Fashion &amp; style <small>Outfits, transitions, editorial layouts</small></li>
+      <li>Festival stories <small>Traditions and celebrations</small></li>
+      <li>Creative concepts <small>Experiments and new formats</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page" data-mood="0" data-mix="1">
+  <div class="inner contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow rv">Contact me</p>
+      <p class="closing rv">If something here made you smile, inspired you, or made you stay a little longer, <em>I'd love to hear from you.</em> &#9825;</p>
+      <p class="hand rv">Have a creative idea? My inbox is open.</p>
+    </div>
+    <div class="crows rv">
+      <a class="crow" data-link="instagram"><span class="k">Instagram</span><span class="v"><span class="live">Follow along &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <div class="crow" id="emailRow"><span class="k">Email</span><span class="v" id="emailVal">Address coming soon</span><button class="copy-btn" id="copyEmail" type="button" hidden>Copy</button></div>
+      <a class="crow" data-link="linkedin" hidden><span class="k">LinkedIn</span><span class="v"><span class="live">Connect &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <a class="crow" data-link="github" hidden><span class="k">GitHub</span><span class="v"><span class="live">See the code &#8599;</span><span class="soon">Link coming soon</span></span></a>
+      <a class="crow" data-link="mediaKit" hidden><span class="k">Media kit</span><span class="v"><span class="live">Open &#8599;</span><span class="soon">Coming soon</span></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <p class="thanks">Thanks for visiting my little corner of the internet. &#9825;</p>
+    <p>&copy; 2026 Vedika Suresh Phadtare &middot; <button class="lost" id="lostBtn" type="button">psst, try wandering off</button></p>
+  </div>
+</footer>
+</div>
+
+<div class="dock" id="dock" role="group" aria-label="Page mood">
+  <span class="dock-name" id="moodName" aria-live="polite">The Pink Dream</span>
+  <div class="dots">
+    <button class="mdot on" type="button" data-m="0" style="--c:#F4C2C2" aria-label="Pin The Pink Dream mood"></button>
+    <button class="mdot" type="button" data-m="1" style="--c:#F3C99A" aria-label="Pin Golden Hour mood"></button>
+    <button class="mdot" type="button" data-m="2" style="--c:#7A4E66" aria-label="Pin Midnight Muse mood"></button>
+    <button class="mdot" type="button" data-m="3" style="--c:#D9CBEE" aria-label="Pin Creative Playground mood"></button>
+  </div>
+</div>
+<button class="music" id="music" type="button" aria-pressed="false" aria-label="Play soft background music"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="m-label" id="musicLabel">Music off</span></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo preview" hidden>
+  <button class="lb-x" id="lbX" type="button" aria-label="Close preview">&times;</button>
+  <button class="lb-nav prev" id="lbPrev" type="button" aria-label="Previous photo">&#8249;</button>
+  <figure class="lb-fig">
+    <div class="lb-img" id="lbImg"></div>
+    <figcaption class="lb-cap"><small id="lbCat"></small><strong id="lbTitle"></strong><span id="lbDesc"></span><a id="lbLink" data-link="instagram" href="#"><span class="live">View the original &#8599;</span><span class="soon">Link coming soon</span></a></figcaption>
+  </figure>
+  <button class="lb-nav next" id="lbNext" type="button" aria-label="Next photo">&#8250;</button>
+</div>
+
+<div class="lost-page" id="lostPage" role="dialog" aria-modal="true" aria-label="Page not found" hidden>
+  <div class="lost-box">
+    <svg viewBox="0 0 200 250" aria-hidden="true">
+      <defs><radialGradient id="bl" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFF8F0"/><stop offset=".35" stop-color="#F4C2C2"/><stop offset="1" stop-color="#B78491"/></radialGradient></defs>
+      <path d="M100 150C96 175 108 195 98 235" fill="none" stroke="#B78491" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M92 146L108 146 100 158Z" fill="#B78491"/>
+      <ellipse cx="100" cy="86" rx="58" ry="66" fill="url(#bl)"/>
+      <ellipse cx="78" cy="58" rx="12" ry="20" fill="#fff" opacity=".55" transform="rotate(24 78 58)"/>
+      <path d="M28 40l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#E8B97E"/>
+      <path d="M170 24l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#E0A0AE"/>
+      <path d="M176 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#E8B97E"/>
+    </svg>
+    <h2>Oops, this page wandered off into another universe.</h2>
+    <button class="btn btn-solid" id="lostHome" type="button">Take me home</button>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
